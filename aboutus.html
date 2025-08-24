@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - Hospitality Jobs</title>
+    <title>About Us - BrightSpark Hire Consultancy Solutions</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
       .about {
@@ -20,15 +20,56 @@
           font-size: 0.8rem;
         }
       }
-      .about h2 {
+      .about h2,
+      .about h3 {
         font-family: "Playfair Display", serif;
-        margin-bottom: 16px;
+        margin: 20px 0 12px;
       }
       .about p {
         line-height: 1.7;
         margin-bottom: 18px;
         color: var(--text);
       }
+      ul {
+        margin: 10px 0 20px 20px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+      /* FAQ Styles */
+      .faq-item {
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        overflow: hidden;
+      }
+      .faq-question {
+        background: var(--bg-soft);
+        padding: 12px 16px;
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+      }
+      .faq-question::after {
+        content: "+";
+        position: absolute;
+        right: 16px;
+        font-size: 18px;
+      }
+      .faq-item.active .faq-question::after {
+        content: "-";
+      }
+      .faq-answer {
+        display: none;
+        padding: 12px 16px;
+        background: var(--card);
+        border-top: 1px solid var(--border);
+      }
+      .faq-item.active .faq-answer {
+        display: block;
+      }
+
+      /* Team Grid */
       .team {
         margin-top: 32px;
       }
@@ -66,8 +107,8 @@
     <header>
       <div class="container nav">
         <div class="brand">
-          <div class="logo">HC</div>
-          <span>Hospitality Careers</span>
+          <div class="logo">BS</div>
+          <span>BrightSpark Hire Consultancy Solutions</span>
         </div>
 
         <!-- Hamburger button -->
@@ -77,7 +118,7 @@
           <a href="/index.html">Home</a>
           <a href="/jobslisting.html">Jobs</a>
           <a href="/trainingprogram.html">Training</a>
-          <a href="/aboutus.html">About Us</a>
+          <a href="/aboutus.html" class="active">About Us</a>
           <a href="/whyus.html">Why Us</a>
           <a href="/contact.html">Contact Us</a>
         </nav>
@@ -88,21 +129,195 @@
       <div class="about">
         <h2>About Us</h2>
         <p>
-          Hospitality Jobs is a recruitment and training platform dedicated to
-          connecting passionate job seekers with leading opportunities in the
-          hospitality industry across the UK and India.
+          At <strong>BrightSpark Hire Consultancy Solutions</strong>, we believe
+          in creating real opportunities for individuals aspiring to build a
+          career in the hospitality industry. Based in the UK, we specialize in
+          connecting job seekers with leading hotels, agencies, and employers
+          across London and beyond.
         </p>
         <p>
-          We provide specialized training programs from 2-week intensive courses
-          to 90-day full training with guaranteed job placements. Every
-          candidate receives internationally recognized certifications, and if
-          placement fails, we offer a full money-back guarantee.
+          We go beyond just job placement—we prepare you for success. With our
+          hospitality training programs, including industry-standard tools such
+          as Opera PMS, Cloud and other essential systems, you’ll gain the
+          skills and confidence needed to excel in your role. Our training comes
+          with certifications recognized by employers, giving you a competitive
+          edge.
         </p>
         <p>
-          Our mission is simple: to empower candidates with the right skills and
-          connect them with the right employers, ensuring growth in their
-          careers and success for our partners in the hospitality industry.
+          What sets us apart is our
+          <strong>Job Guarantee Program</strong>. We ensure that every candidate
+          who joins us secures employment within 90 days of application. From
+          the moment you begin your journey with us, our dedicated team supports
+          you every step of the way—training, mentoring, interview preparation,
+          and direct connections to employers.
         </p>
+        <p>
+          Whether you are seeking part-time or full-time roles, we are committed
+          to guiding you until you land your dream job.
+        </p>
+
+        <h3>Our Mission</h3>
+        <p>
+          To empower individuals with the skills, confidence, and opportunities
+          they need to succeed in the UK hospitality industry.
+        </p>
+
+        <h3>Our Vision</h3>
+        <p>
+          A future where every passionate job seeker finds the right career path
+          with the right guidance and guaranteed opportunities.
+        </p>
+
+        <h3>Our Services</h3>
+        <ul>
+          <li>
+            <strong>Hospitality Training</strong> – Hands-on training with
+            industry tools like Opera Cloud.
+          </li>
+          <li>
+            <strong>Certification Programs</strong> – Gain employer-recognized
+            certificates that boost your CV.
+          </li>
+          <li>
+            <strong>Guaranteed Job Placement</strong> – Secure a part-time or
+            full-time job in the UK within 90 days.
+          </li>
+          <li>
+            <strong>Ongoing Career Support</strong> – We guide and support you
+            until you are successfully employed.
+          </li>
+        </ul>
+
+        <h3>How It Works</h3>
+        <ul>
+          <li><strong>Apply Online</strong> – Submit your application.</li>
+          <li>
+            <strong>Get Certified</strong> – Build a strong CV with globally
+            recognized credentials.
+          </li>
+          <li>
+            <strong>Get Hired</strong> – We connect you with hotels & agencies
+            in London—job guaranteed.
+          </li>
+        </ul>
+
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>✅ Job Guarantee in 90 Days</li>
+          <li>✅ Training on Opera PMS & other hospitality tools</li>
+          <li>✅ Strong ties with agencies & hotels in London</li>
+          <li>✅ Industry-recognized certifications</li>
+          <li>✅ Support until you land your job</li>
+        </ul>
+
+        <h3>Frequently Asked Questions (FAQ)</h3>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-question">1. What kind of jobs do you offer?</div>
+            <div class="faq-answer">
+              We provide part-time and full-time opportunities in the
+              hospitality sector, including roles in hotels, restaurants, and
+              agencies across London.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              2. Do you really guarantee a job within 90 days?
+            </div>
+            <div class="faq-answer">
+              Yes! We have partnerships with leading hotels and recruitment
+              agencies in London. Once you complete your training and
+              certification, we ensure you are placed in a suitable role within
+              90 days of your application.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">3. What is Opera Cloud?</div>
+            <div class="faq-answer">
+              Opera Cloud (Property Management System) is a global hotel
+              software used by major hotels for reservations, check-ins,
+              billing, and customer management. Training on Opera PMS gives you
+              an advantage and makes you job-ready from day one.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">4. Who can apply?</div>
+            <div class="faq-answer">
+              Our program is open to:<br /><br />
+              • UK residents seeking part-time or full-time hospitality jobs<br />
+              • International students and newcomers who want to start a
+              career<br />
+              • Anyone looking to gain practical training and certifications to
+              improve their job prospects
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              5. Do I need prior experience in hospitality?
+            </div>
+            <div class="faq-answer">
+              No prior experience is required. We provide complete training and
+              support to help beginners as well as those looking to upgrade
+              their skills.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              6. What certifications will I receive?
+            </div>
+            <div class="faq-answer">
+              You will receive industry-recognized certifications in hospitality
+              operations and systems (including Opera PMS), which are valued by
+              employers in the UK.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">7. How long does the training take?</div>
+            <div class="faq-answer">
+              Our training is short and intensive, designed to prepare you
+              quickly for the job market. The duration depends on your chosen
+              program, but most candidates complete it within a few weeks.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              8. Will you support me after training?
+            </div>
+            <div class="faq-answer">
+              Yes! Our team provides continuous support until you secure
+              employment. We help with CV preparation, interview training, and
+              connecting you with the right employers.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              9. Are there any fees for training and job placement?
+            </div>
+            <div class="faq-answer">
+              We provide training, certification, and guaranteed job placement
+              at affordable program fees. (You can add details here about
+              pricing and our team will contact you.)
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">10. How do I get started?</div>
+            <div class="faq-answer">
+              It’s simple:<br /><br />
+              1. Apply online through our website.<br />
+              2. Join our training and certification program.<br />
+              3. Get placed in a guaranteed job within 90 days!
+            </div>
+          </div>
+        </div>
 
         <div class="team">
           <h3>Our Team</h3>
@@ -126,6 +341,16 @@
         </div>
       </div>
     </main>
+
     <script src="script.js"></script>
+    <script>
+      // FAQ toggle functionality
+      document.querySelectorAll(".faq-question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const item = q.parentElement;
+          item.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>

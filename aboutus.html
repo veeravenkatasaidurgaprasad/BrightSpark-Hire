@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Hospitality Jobs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .about {
+        max-width: 900px;
+        margin: 40px auto;
+        background: var(--card);
+        padding: 32px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+      }
+      @media (orientation: portrait) {
+        .menu {
+          font-size: 0.8rem;
+        }
+      }
+      .about h2 {
+        font-family: "Playfair Display", serif;
+        margin-bottom: 16px;
+      }
+      .about p {
+        line-height: 1.7;
+        margin-bottom: 18px;
+        color: var(--text);
+      }
+      .team {
+        margin-top: 32px;
+      }
+      .team h3 {
+        margin-bottom: 16px;
+      }
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+      .team-member {
+        background: var(--bg-soft);
+        padding: 16px;
+        border-radius: 12px;
+        text-align: center;
+        border: 1px solid var(--border);
+      }
+      .team-member img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+      .team-member h4 {
+        margin: 6px 0;
+      }
+      .team-member p {
+        font-size: 14px;
+        color: var(--text-light);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo">H</div>
+          Hospitality Jobs
+        </div>
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="btn ghost">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="about">
+        <h2>About Us</h2>
+        <p>
+          Hospitality Jobs is a recruitment and training platform dedicated to
+          connecting passionate job seekers with leading opportunities in the
+          hospitality industry across the UK and India.
+        </p>
+        <p>
+          We provide specialized training programs from 2-week intensive courses
+          to 90-day full training with guaranteed job placements. Every
+          candidate receives internationally recognized certifications, and if
+          placement fails, we offer a full money-back guarantee.
+        </p>
+        <p>
+          Our mission is simple: to empower candidates with the right skills and
+          connect them with the right employers, ensuring growth in their
+          careers and success for our partners in the hospitality industry.
+        </p>
+
+        <div class="team">
+          <h3>Our Team</h3>
+          <div class="team-grid">
+            <div class="team-member">
+              <img src="/images/veera.png" alt="Founder" />
+              <h4>Bhanu Praksh</h4>
+              <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+              <img src="/images/veera.png" alt="Training Head" />
+              <h4>Loukya Sri</h4>
+              <p>Head of Training</p>
+            </div>
+            <div class="team-member">
+              <img src="/images/veera.png" alt="Recruitment Head" />
+              <h4>Veera</h4>
+              <p>Head of Recruitment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .faqs-page {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 12px;
+      }
+      .faqs-page h2 {
+        font-family: "Playfair Display", serif;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+      .faq-item {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        margin-bottom: 14px;
+        padding: 16px 20px;
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .faq-item:hover {
+        background: rgba(43, 182, 115, 0.05);
+      }
+      .faq-question {
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .faq-answer {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 14px;
+        display: none;
+      }
+      .faq-item.active .faq-answer {
+        display: block;
+      }
+      .toggle-icon {
+        font-weight: 700;
+        font-size: 18px;
+        transition: transform 0.3s;
+      }
+      .faq-item.active .toggle-icon {
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo">H</div>
+          Hospitality Jobs
+        </div>
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="trainings.html">Trainings</a>
+          <a href="certificates.html">Certificates</a>
+          <a href="faqs.html" class="btn ghost">FAQs</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container faqs-page">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How can I apply for a job?
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          You can apply directly through the job listings page by clicking the
+          "Apply" button and filling in your details.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          What training programs are offered?
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          We offer 2-week, 1-month, and 3-month hospitality training programs,
+          all with job guarantee options.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I get my certificate after completing a training?
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Once you successfully complete a training program, your certificate
+          will be available in the Certificates page under your profile.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Can I request a password reset?
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Yes, click on "Forgot Password" on the login page to receive a
+          password reset link via your registered email.
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const faqItems = document.querySelectorAll(".faq-item");
+      faqItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

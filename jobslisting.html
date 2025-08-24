@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Listings - Hospitality Jobs</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .jobs {
+        max-width: 1000px;
+        margin: 40px auto;
+      }
+      .jobs h2 {
+        font-family: "Playfair Display", serif;
+        margin-bottom: 20px;
+      }
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 30px;
+      }
+      .filters select {
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        background: var(--bg-soft);
+        color: var(--text);
+        font-size: 15px;
+      }
+      .job-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease;
+      }
+      .job-card:hover {
+        transform: translateY(-2px);
+      }
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .job-header h3 {
+        margin: 0;
+      }
+      .job-type {
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .fulltime {
+        background: #dff7df;
+        color: #1b7a1b;
+      }
+      .parttime {
+        background: #f7e9df;
+        color: #7a3d1b;
+      }
+      .job-meta {
+        font-size: 14px;
+        color: var(--text-light);
+        margin: 6px 0 14px 0;
+      }
+      .job-desc {
+        margin-bottom: 16px;
+        line-height: 1.6;
+      }
+      .job-actions {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo">H</div>
+          Hospitality Jobs
+        </div>
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a href="jobs.html" class="btn ghost">Jobs</a>
+          <!-- <a href="dashboard.html">Dashboard</a> -->
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="jobs">
+        <h2>Available Hospitality Jobs</h2>
+
+        <!-- Filters -->
+        <div class="filters">
+          <select id="locationFilter">
+            <option value="">Filter by Location</option>
+            <option value="india">India</option>
+            <option value="uk">UK</option>
+          </select>
+          <select id="typeFilter">
+            <option value="">Filter by Job Type</option>
+            <option value="fulltime">Full-Time</option>
+            <option value="parttime">Part-Time</option>
+          </select>
+        </div>
+
+        <!-- Job Cards -->
+        <div class="job-card" data-location="india" data-type="fulltime">
+          <div class="job-header">
+            <h3>Hotel Receptionist</h3>
+            <span class="job-type fulltime">Full-Time</span>
+          </div>
+          <div class="job-meta">
+            Location: Hyderabad, India • Salary: ₹25,000/month
+          </div>
+          <p class="job-desc">
+            Manage front desk operations, assist guests with check-in/out, and
+            provide excellent customer service.
+          </p>
+          <div class="job-actions">
+            <a href="#" class="btn primary">Apply Now</a>
+          </div>
+        </div>
+
+        <div class="job-card" data-location="uk" data-type="parttime">
+          <div class="job-header">
+            <h3>Event Catering Staff</h3>
+            <span class="job-type parttime">Part-Time</span>
+          </div>
+          <div class="job-meta">Location: London, UK • Salary: £12/hour</div>
+          <p class="job-desc">
+            Assist in setting up, serving, and managing hospitality services at
+            premium events across London.
+          </p>
+          <div class="job-actions">
+            <a href="#" class="btn primary">Apply Now</a>
+          </div>
+        </div>
+
+        <div class="job-card" data-location="india" data-type="parttime">
+          <div class="job-header">
+            <h3>Waiter / Waitress</h3>
+            <span class="job-type parttime">Part-Time</span>
+          </div>
+          <div class="job-meta">
+            Location: Mumbai, India • Salary: ₹150/hour
+          </div>
+          <p class="job-desc">
+            Serve food and beverages, maintain cleanliness of tables, and ensure
+            customer satisfaction.
+          </p>
+          <div class="job-actions">
+            <a href="#" class="btn primary">Apply Now</a>
+          </div>
+        </div>
+
+        <div class="job-card" data-location="uk" data-type="fulltime">
+          <div class="job-header">
+            <h3>Hotel Manager</h3>
+            <span class="job-type fulltime">Full-Time</span>
+          </div>
+          <div class="job-meta">
+            Location: Manchester, UK • Salary: £35,000/year
+          </div>
+          <p class="job-desc">
+            Oversee hotel operations, manage staff, handle guest relations, and
+            ensure smooth business performance.
+          </p>
+          <div class="job-actions">
+            <a href="#" class="btn primary">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const locationFilter = document.getElementById("locationFilter");
+      const typeFilter = document.getElementById("typeFilter");
+      const jobs = document.querySelectorAll(".job-card");
+
+      function filterJobs() {
+        const location = locationFilter.value;
+        const type = typeFilter.value;
+
+        jobs.forEach((job) => {
+          const jobLocation = job.dataset.location;
+          const jobType = job.dataset.type;
+
+          if (
+            (location === "" || location === jobLocation) &&
+            (type === "" || type === jobType)
+          ) {
+            job.style.display = "block";
+          } else {
+            job.style.display = "none";
+          }
+        });
+      }
+
+      locationFilter.addEventListener("change", filterJobs);
+      typeFilter.addEventListener("change", filterJobs);
+    </script>
+  </body>
+</html>

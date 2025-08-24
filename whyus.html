@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Choose Us</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .whyus {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+      .whyus h1 {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 30px;
+        font-family: "Playfair Display", serif;
+      }
+      .reasons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+      }
+      .reason {
+        background: var(--card, #fff);
+        border: 1px solid var(--border, #ddd);
+        border-radius: var(--radius, 12px);
+        box-shadow: var(--shadow, 0 2px 6px rgba(0, 0, 0, 0.08));
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.2s ease;
+      }
+      .reason:hover {
+        transform: translateY(-5px);
+      }
+      .reason h3 {
+        font-size: 20px;
+        margin: 12px 0;
+        color: var(--brand, #2c3e50);
+      }
+      .reason p {
+        font-size: 15px;
+        color: #555;
+      }
+      .reason-icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: var(--brand, #0077cc);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo">H</div>
+          Hospitality Jobs
+        </div>
+        <div class="menu">
+          <a href="index.html">Home</a>
+          <a href="whyus.html" class="btn ghost">Why Us</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="whyus">
+      <h1>Why Choose Us?</h1>
+      <div class="reasons">
+        <div class="reason">
+          <div class="reason-icon">🎯</div>
+          <h3>Guaranteed Placement</h3>
+          <p>
+            We provide a job guarantee with a money-back policy if placement
+            does not happen.
+          </p>
+        </div>
+        <div class="reason">
+          <div class="reason-icon">🎓</div>
+          <h3>Certified Training</h3>
+          <p>
+            All our programs include globally recognized certifications for
+            career growth.
+          </p>
+        </div>
+        <div class="reason">
+          <div class="reason-icon">🌍</div>
+          <h3>Global Opportunities</h3>
+          <p>
+            Access jobs and training in both the UK and India, expanding your
+            career options.
+          </p>
+        </div>
+        <div class="reason">
+          <div class="reason-icon">⏱️</div>
+          <h3>Flexible Programs</h3>
+          <p>
+            Choose from 2-week, 1-month, or 90-day programs designed to fit your
+            goals.
+          </p>
+        </div>
+        <div class="reason">
+          <div class="reason-icon">💬</div>
+          <h3>24/7 Support</h3>
+          <p>
+            Our team is available anytime to resolve queries and ensure smooth
+            progress.
+          </p>
+        </div>
+        <div class="reason">
+          <div class="reason-icon">🤝</div>
+          <h3>Employer Network</h3>
+          <p>
+            We partner with top hotels and event companies to connect you with
+            the right job.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

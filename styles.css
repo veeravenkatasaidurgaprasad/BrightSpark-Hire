@@ -523,3 +523,13 @@ footer {
     gap: 10px;
   }
 }
+
+#foot-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footerBadge {
+  margin-top: 1rem;
+  color: #eef2ff;
+}

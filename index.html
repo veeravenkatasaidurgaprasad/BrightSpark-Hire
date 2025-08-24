@@ -3,26 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BrightSpark hire consultancy solutions</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>BrightSpark Hire Consultancy Solutions</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <div class="container nav">
+      <div class="nav">
         <div class="brand">
           <div class="logo">BS</div>
-          <span>BrightSpark hire consultancy solutions</span>
+          <span>BrightSpark Hire Consultancy Solutions</span>
         </div>
-
-        <!-- Hamburger button -->
         <button class="hamburger menutoggle" aria-label="Menu">☰</button>
-
         <nav class="menu">
           <a href="/jobslisting.html">Jobs</a>
           <a href="/trainingprogram.html">Training</a>
@@ -48,81 +43,71 @@
           <a href="/trainingprogram.html" class="btn primary"
             >Explore Training</a
           >
-          <!-- <a href="/login.html" class="btn">Login</a> -->
-          <!-- <a href="/signup.html" class="btn badge">Signup</a> -->
-          <!-- <span class="badge" title="Guarantee">Signup</span> -->
         </div>
         <div class="hero-media">
           <div class="card">
             <img
               alt="Hotel lobby with staff greeting guests"
-              src="/images/heromain.jpg"
+              src="/images/Hotel-lobby-with-staff-greeting-guests.jpg"
             />
           </div>
-          <!-- <div class="card">
-            <img
-              alt="Event service setup"
-              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
-            />
-          </div> -->
           <div class="card">
             <img
-              width="100%"
-              height="auto"
               alt="Event service setup"
-              src="/images/index-hero1.jpg"
+              src="/images/Event-service-setup.jpg"
             />
           </div>
         </div>
       </section>
 
-      <!-- Services Snapshot -->
+      <!-- What we offer -->
       <section class="container" id="why-us">
         <div class="section-title">
           <h2>What we offer</h2>
           <span class="muted"
-            >Jobs Training Guarantee Certifications Support</span
+            >Jobs · Training · Guarantee · Certifications</span
           >
         </div>
-        <div class="grid">
-          <div class="col-3 col-12 card">
+        <div
+          class="grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))"
+        >
+          <div class="card">
             <h3>Job listings</h3>
             <p class="muted">
               Part time and full time vacancies in hotels and events across UK
               and India
             </p>
-            <div class="stack">
+            <div>
               <span class="chip">Front office</span>
               <span class="chip">Food and beverage</span>
               <span class="chip">Events</span>
               <span class="chip">Housekeeping</span>
             </div>
           </div>
-          <div class="col-3 col-12 card">
+          <div class="card">
             <h3>Training programs</h3>
             <p class="muted">Three formats to fit your schedule and goals</p>
-            <div class="stack">
+            <div>
               <span class="chip">90 day intensive</span>
               <span class="chip">1 month fast track</span>
               <span class="chip">2 week starter</span>
             </div>
           </div>
-          <div class="col-3 col-12 card">
+          <div class="card">
             <h3>Job guarantee</h3>
             <p class="muted">
               Placement or full refund terms that are clear and simple
             </p>
-            <span class="badge" title="Money back guarantee"
-              >Guaranteed Job</span
-            >
+            <span class="badge">Guaranteed Job</span>
           </div>
-          <div class="col-3 col-12 card">
+          <div class="card">
             <h3>Certifications</h3>
             <p class="muted">
               Industry recognized certificates issued after successful
               completion
             </p>
-            <div class="stack">
+            <div>
               <span class="chip">Hotel ops</span>
               <span class="chip">Food safety</span>
               <span class="chip">Customer care</span>
@@ -131,64 +116,37 @@
         </div>
       </section>
 
-      <!-- Training Programs -->
+      <!-- Training -->
       <section class="container" id="training">
         <div class="section-title">
           <h2>Training programs</h2>
           <span class="muted">Pick a path that matches your timeline</span>
         </div>
-        <div class="grid">
-          <article class="col-4 col-12 card">
-            <img src="/images/trainingmain.jpg" alt="Training class" />
-            <h3>90 day intensive</h3>
-            <p class="meta">
-              Hands on modules Front office F and B Events Housekeeping English
-              and soft skills Weekly assessments
-            </p>
-            <div class="stack">
-              <span class="chip">Mentor support</span>
-              <span class="chip">Placement prep</span>
-              <span class="chip">Certification</span>
-            </div>
-            <div
-              id="trainingBtns"
-              style="margin-top: 12px; display: flex; gap: 10px"
-            >
-              <a class="btn primary" href="#enroll">Enroll now</a>
-              <a class="btn" href="#syllabus">Download syllabus</a>
-            </div>
-          </article>
-          <article class="col-4 col-12 card">
+        <div
+          class="grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))"
+        >
+          <article class="card">
             <img
-              src="/images/trainingsecond.jpg"
-              alt="Food and beverage training"
-            />
-            <h3>1 month fast track</h3>
-            <p class="meta">
-              Core hospitality skills Resume and interview prep Choice of role
-              track Front office or F and B Evening batch available
-            </p>
-            <div class="stack">
-              <span class="chip">Hybrid</span>
-              <span class="chip">Weekend projects</span>
-              <span class="chip">Certification</span>
-            </div>
-            <div style="margin-top: 12px; display: flex; gap: 10px">
-              <a class="btn primary" href="#enroll">Enroll now</a>
-              <a class="btn" href="#syllabus">Download syllabus</a>
-            </div>
-          </article>
-          <article class="col-4 col-12 card">
-            <img
-              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop"
+              width="100%"
+              src="/images/training-hospitality.webp"
               alt="Front desk training"
+              style="border-radius: 12px; margin-bottom: 12px"
             />
-            <h3>2 week starter</h3>
-            <p class="meta">
-              Essential customer service Food safety basics Grooming and
-              etiquette Quick start into entry roles
+            <h2>Opera PMS Training</h2>
+            <p>
+              Practical training, industry-recognized certifications, and
+              guaranteed job placement within 90 days.
             </p>
-            <div class="stack">
+            <p class="muted">
+              Master hotel management software and become job-ready from day
+              one.
+            </p>
+            <h3>Job Guarantee</h3>
+            <p>
+              Complete training and secure a job in hospitality within 90 days.
+            </p>
+            <div>
               <span class="chip">Daily practice</span>
               <span class="chip">Certificate</span>
               <span class="chip">Career guidance</span>
@@ -218,7 +176,6 @@
                 <span class="chip">Growth plan</span>
               </div>
             </div>
-            <a class="btn" href="#apply">Apply</a>
           </div>
           <div class="col-6 col-12 job">
             <div>
@@ -232,7 +189,6 @@
                 <span class="chip">Tips eligible</span>
               </div>
             </div>
-            <a class="btn" href="#apply">Apply</a>
           </div>
           <div class="col-6 col-12 job">
             <div>
@@ -244,7 +200,6 @@
                 <span class="chip">Night allowance</span>
               </div>
             </div>
-            <a class="btn" href="#apply">Apply</a>
           </div>
           <div class="col-6 col-12 job">
             <div>
@@ -255,7 +210,6 @@
                 <span class="chip">Joining bonus</span>
               </div>
             </div>
-            <a class="btn" href="#apply">Apply</a>
           </div>
         </div>
       </section>
@@ -333,15 +287,6 @@
                     name="name"
                     placeholder="Your name"
                     required
-                    style="
-                      width: 100%;
-                      padding: 10px 12px;
-                      border-radius: 12px;
-                      border: 1px solid var(--border);
-                      background: #0c1229;
-                      color: var(--text);
-                      margin-top: 6px;
-                    "
                   />
                 </div>
                 <div class="col-6 col-12">
@@ -352,51 +297,18 @@
                     name="email"
                     placeholder="you mail com"
                     required
-                    style="
-                      width: 100%;
-                      padding: 10px 12px;
-                      border-radius: 12px;
-                      border: 1px solid var(--border);
-                      background: #0c1229;
-                      color: var(--text);
-                      margin-top: 6px;
-                    "
                   />
                 </div>
                 <div class="col-6 col-12">
                   <label for="location">Location</label>
-                  <select
-                    id="location"
-                    name="location"
-                    style="
-                      width: 100%;
-                      padding: 10px 12px;
-                      border-radius: 12px;
-                      border: 1px solid var(--border);
-                      background: #0c1229;
-                      color: var(--text);
-                      margin-top: 6px;
-                    "
-                  >
+                  <select id="location" name="location">
                     <option>UK</option>
                     <option>India</option>
                   </select>
                 </div>
                 <div class="col-6 col-12">
                   <label for="interest">Interest</label>
-                  <select
-                    id="interest"
-                    name="interest"
-                    style="
-                      width: 100%;
-                      padding: 10px 12px;
-                      border-radius: 12px;
-                      border: 1px solid var(--border);
-                      background: #0c1229;
-                      color: var(--text);
-                      margin-top: 6px;
-                    "
-                  >
+                  <select id="interest" name="interest">
                     <option>Jobs</option>
                     <option>90 day training</option>
                     <option>1 month training</option>
@@ -410,15 +322,6 @@
                     name="msg"
                     rows="4"
                     placeholder="Tell us about your goals"
-                    style="
-                      width: 100%;
-                      padding: 10px 12px;
-                      border-radius: 12px;
-                      border: 1px solid var(--border);
-                      background: #0c1229;
-                      color: var(--text);
-                      margin-top: 6px;
-                    "
                   ></textarea>
                 </div>
               </div>
@@ -440,7 +343,7 @@
         <div>
           <div class="brand" style="margin-bottom: 10px">
             <div class="logo">BS</div>
-            <span>BrightSpark hire consultancy solutions</span>
+            <span>BrightSpark Hire Consultancy Solutions</span>
           </div>
           <p>
             Connecting talent with hotels and events while training future

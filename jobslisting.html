@@ -4,78 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Listings - Hospitality Jobs</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      .jobs {
-        max-width: 1000px;
-        margin: 40px auto;
-      }
-      .jobs h2 {
-        font-family: "Playfair Display", serif;
-        margin-bottom: 20px;
-      }
-      .filters {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-bottom: 30px;
-      }
-      .filters select {
-        padding: 10px 14px;
-        border-radius: 10px;
-        border: 1px solid var(--border);
-        background: var(--bg-soft);
-        color: var(--text);
-        font-size: 15px;
-      }
-      .job-card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: var(--shadow);
-        transition: transform 0.2s ease;
-      }
-      .job-card:hover {
-        transform: translateY(-2px);
-      }
-      .job-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .job-header h3 {
-        margin: 0;
-      }
-      .job-type {
-        padding: 4px 10px;
-        border-radius: 20px;
-        font-size: 13px;
-        font-weight: 600;
-        text-transform: uppercase;
-      }
-      .fulltime {
-        background: #dff7df;
-        color: #1b7a1b;
-      }
-      .parttime {
-        background: #f7e9df;
-        color: #7a3d1b;
-      }
-      .job-meta {
-        font-size: 14px;
-        color: var(--text-light);
-        margin: 6px 0 14px 0;
-      }
-      .job-desc {
-        margin-bottom: 16px;
-        line-height: 1.6;
-      }
-      .job-actions {
-        text-align: right;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -90,7 +23,7 @@
 
         <nav class="menu">
           <a href="/index.html">Home</a>
-          <a href="/jobslisting.html">Jobs</a>
+          <a href="/jobslisting.html" class="active">Jobs</a>
           <a href="/trainingprogram.html">Training</a>
           <a href="/aboutus.html">About Us</a>
           <a href="/whyus.html">Why Us</a>
@@ -185,7 +118,49 @@
         </div>
       </div>
     </main>
+    <footer>
+      <div class="container foot-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 10px">
+            <div class="logo">BS</div>
+            <span>BrightSpark Hire Consultancy Solutions</span>
+          </div>
+          <p>
+            Connecting talent with hotels and events while training future
+            leaders
+          </p>
+        </div>
+        <div>
+          <strong>UK office</strong>
+          <p class="muted">Baker Street London NW1 6XE</p>
+        </div>
+        <div>
+          <strong>India office</strong>
+          <p class="muted">Balanagar, Kukatpally 500037</p>
+        </div>
+        <div>
+          <strong>Links</strong>
+          <p>
+            <a href="/jobslisting.html">Jobs</a> ·
+            <a href="/trainingprogram.html">Training</a> ·
+            <a href="/contact.html">Contact</a>
+          </p>
+        </div>
+      </div>
 
+      <div class="container foot-bottom">
+        <span class="muted">© 2025 Hospitality Careers</span>
+        <div class="foot-links">
+          <a href="/termsandconditions.html">Terms & Conditions</a>
+          <a href="/privacypolicy.html">Privacy Policy</a>
+          <span id="footerBadge" class="badge" title="Guarantee"
+            >Job Guarantee</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
     <script>
       const locationFilter = document.getElementById("locationFilter");
       const typeFilter = document.getElementById("typeFilter");

@@ -10,55 +10,161 @@
       rel="stylesheet"
     />
     <style>
-      /* .programs {
-        max-width: 1100px;
-        margin: 40px auto;
+      /* === Existing CSS stays as is (your code above) === */
+
+      /* === Training Page Styles === */
+      .training {
+        padding: 40px 20px;
+      }
+
+      .training-intro {
         text-align: center;
+        max-width: 800px;
+        margin: 0 auto 40px auto;
       }
-      .programs h2 {
+
+      .training-intro h2 {
         font-family: "Playfair Display", serif;
-        margin-bottom: 30px;
+        font-size: 32px;
+        margin-bottom: 16px;
       }
-      .program-grid {
+
+      .training-intro p {
+        color: var(--text-light);
+        font-size: 16px;
+      }
+
+      /* Courses */
+      .courses h3 {
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: 24px;
+        font-family: "Playfair Display", serif;
+      }
+
+      .course-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 24px;
       }
-      .program-card {
+
+      .course-card {
         background: var(--card);
-        border: 1px solid var(--border);
         border-radius: var(--radius);
-        padding: 24px;
         box-shadow: var(--shadow);
+        padding: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        transition: transform 0.2s ease;
+        align-items: flex-start;
       }
-      .program-card:hover {
-        transform: translateY(-5px);
+
+      .course-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
       }
-      .program-card h3 {
-        margin: 0;
+
+      .course-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: var(--radius);
+        margin-bottom: 16px;
+      }
+
+      .course-card h4 {
+        margin: 0 0 12px;
         font-size: 20px;
+        font-weight: 600;
       }
-      .program-card .price {
-        font-size: 22px;
-        font-weight: 700;
-        color: var(--brand-2);
-        margin: 10px 0 20px 0;
+
+      .course-card p {
+        font-size: 15px;
+        color: var(--text-light);
+        margin-bottom: 12px;
       }
-      .features {
-        text-align: left;
-        margin-bottom: 20px;
-      }
-      .features li {
-        margin-bottom: 8px;
+
+      .course-card ul {
+        padding-left: 18px;
+        margin: 0;
+        color: var(--text);
+        font-size: 14px;
         line-height: 1.5;
       }
-      .btn-block {
-        width: 100%;
-      } */
+
+      /* Enroll Section */
+      .enroll {
+        margin-top: 60px;
+        background: var(--card);
+        padding: 30px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .enroll h3 {
+        font-size: 24px;
+        margin-bottom: 16px;
+        font-family: "Playfair Display", serif;
+      }
+
+      .enroll ol {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+
+      .enroll li {
+        margin-bottom: 10px;
+        font-size: 15px;
+      }
+
+      .enroll .btn {
+        display: inline-block;
+        background: linear-gradient(90deg, var(--brand), var(--brand-2));
+        color: white;
+        text-align: center;
+      }
+
+      /* === Responsive Fixes (extra for training page) === */
+      @media (max-width: 768px) {
+        .training-intro h2 {
+          font-size: 26px;
+        }
+
+        .course-card img {
+          height: 160px;
+        }
+
+        .enroll {
+          padding: 20px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .training-intro h2 {
+          font-size: 22px;
+        }
+
+        .courses h3 {
+          font-size: 20px;
+        }
+
+        .course-card {
+          padding: 16px;
+        }
+
+        .course-card h4 {
+          font-size: 18px;
+        }
+
+        .enroll h3 {
+          font-size: 20px;
+        }
+
+        .btn {
+          padding: 10px 14px; /* already applied in your overrides */
+          font-size: 14px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -100,7 +206,10 @@
         <div class="course-grid">
           <!-- Opera PMS Training -->
           <div class="course-card">
-            <img src="/images/opera.jpg" alt="Opera PMS Training" />
+            <img
+              src="/images/opera-pms-training.png"
+              alt="Opera PMS Training"
+            />
             <h4>Opera PMS & Cloud Training</h4>
             <p>
               Learn the most widely used hotel management software. Gain
@@ -117,7 +226,7 @@
 
           <!-- Certification Program -->
           <div class="course-card">
-            <img src="/images/certificate.jpg" alt="Certification" />
+            <img src="/images/reception.webp" alt="Certification" />
             <h4>Certification Programs</h4>
             <p>
               Boost your CV with industry-recognized hospitality certifications.
@@ -132,7 +241,7 @@
 
           <!-- Job Guarantee Program -->
           <div class="course-card">
-            <img src="/images/job.jpg" alt="Job Placement" />
+            <img src="/images/training-page-image.jpg" alt="Job Placement" />
             <h4>Job Guarantee Program</h4>
             <p>
               Complete the training, get certified, and secure a job within 90
@@ -148,7 +257,7 @@
 
           <!-- Career Support -->
           <div class="course-card">
-            <img src="/images/support.jpg" alt="Career Support" />
+            <img src="/images/training-hospitality.webp" alt="Career Support" />
             <h4>Ongoing Career Support</h4>
             <p>
               Our support doesn’t end after training. We continue to guide you

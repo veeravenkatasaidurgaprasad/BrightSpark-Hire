@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles.css" />
 
     <style>
-      :root {
+      /* :root {
         --brand: #4f46e5;
         --brand-2: #6366f1;
         --text: #1f2937;
@@ -20,7 +20,7 @@
         --card: rgba(255, 255, 255, 0.8);
         --radius: 16px;
         --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      }
+      } */
 
       body {
         margin: 0;
@@ -79,7 +79,6 @@
         cursor: pointer;
       }
 
-      /* Mobile nav */
       @media (max-width: 768px) {
         .menu {
           display: none;
@@ -112,7 +111,6 @@
         }
       }
 
-      /* Contact */
       .contact {
         max-width: 950px;
         margin: 60px auto;
@@ -223,7 +221,7 @@
           <div class="logo">BS</div>
           <span>BrightSpark Hire Consultancy Solutions</span>
         </div>
-        <button class="hamburger" aria-label="Menu">☰</button>
+        <button class="hamburger menutoggle" aria-label="Menu">☰</button>
         <nav class="menu">
           <a href="/index.html">Home</a>
           <a href="/jobslisting.html">Jobs</a>
@@ -234,6 +232,7 @@
         </nav>
       </div>
     </header>
+    <div class="overlay"></div>
 
     <main>
       <div class="contact">
@@ -317,7 +316,7 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
+    <!-- <script>
       // Mobile menu toggle
       document.querySelector(".hamburger").addEventListener("click", () => {
         document.querySelector(".menu").classList.toggle("active");
@@ -331,6 +330,6 @@
           menu.classList.remove("active");
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>

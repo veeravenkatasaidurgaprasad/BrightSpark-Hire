@@ -29,6 +29,28 @@ header {
   top: 0;
   z-index: 1000;
 }
+
+header h1 {
+  font-size: 18px;
+}
+
+@media (orientation: portrait) {
+  header {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 14px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+}
+header h1 {
+  font-size: 18px;
+}
+#mainheadingtag {
+  font-size: 1.2rem;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;

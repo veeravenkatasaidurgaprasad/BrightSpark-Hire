@@ -3,55 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAQs</title>
+    <title>FAQs - BrightSpark Hire Consultancy Solutions</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      .faqs-page {
+      .faq-container {
         max-width: 900px;
         margin: 40px auto;
-        padding: 0 12px;
+        background: var(--card);
+        padding: 32px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
       }
-      .faqs-page h2 {
+      .faq-container h2 {
         font-family: "Playfair Display", serif;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
         text-align: center;
       }
+
+      /* FAQ Styles */
       .faq-item {
-        background: var(--card);
         border: 1px solid var(--border);
-        border-radius: var(--radius);
-        margin-bottom: 14px;
-        padding: 16px 20px;
-        box-shadow: var(--shadow);
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-      .faq-item:hover {
-        background: rgba(43, 182, 115, 0.05);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        overflow: hidden;
       }
       .faq-question {
-        font-size: 16px;
-        font-weight: 600;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        background: var(--bg-soft);
+        padding: 14px 16px;
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+      }
+      .faq-question::after {
+        content: "+";
+        position: absolute;
+        right: 16px;
+        font-size: 18px;
+      }
+      .faq-item.active .faq-question::after {
+        content: "-";
       }
       .faq-answer {
-        margin-top: 10px;
-        color: var(--muted);
-        font-size: 14px;
         display: none;
+        padding: 14px 16px;
+        background: var(--card);
+        border-top: 1px solid var(--border);
+        line-height: 1.6;
+        color: var(--text);
       }
       .faq-item.active .faq-answer {
         display: block;
-      }
-      .toggle-icon {
-        font-weight: 700;
-        font-size: 18px;
-        transition: transform 0.3s;
-      }
-      .faq-item.active .toggle-icon {
-        transform: rotate(45deg);
       }
     </style>
   </head>
@@ -59,8 +61,8 @@
     <header>
       <div class="container nav">
         <div class="brand">
-          <div class="logo">HC</div>
-          <span>BrightSpark hire consultancy solutions</span>
+          <div class="logo">BS</div>
+          <span>BrightSpark Hire Consultancy Solutions</span>
         </div>
 
         <!-- Hamburger button -->
@@ -72,67 +74,128 @@
           <a href="/trainingprogram.html">Training</a>
           <a href="/aboutus.html">About Us</a>
           <a href="/whyus.html">Why Us</a>
+          <a href="/faq.html" class="active">FAQs</a>
           <a href="/contact.html">Contact Us</a>
         </nav>
       </div>
     </header>
 
-    <main class="container faqs-page">
-      <h2>Frequently Asked Questions</h2>
+    <main class="container">
+      <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          How can I apply for a job?
-          <span class="toggle-icon">+</span>
+        <div class="faq-item">
+          <div class="faq-question">1. What kind of jobs do you offer?</div>
+          <div class="faq-answer">
+            We provide part-time and full-time opportunities in the hospitality
+            sector, including roles in hotels, restaurants, and agencies across
+            London.
+          </div>
         </div>
-        <div class="faq-answer">
-          You can apply directly through the job listings page by clicking the
-          "Apply" button and filling in your details.
-        </div>
-      </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          What training programs are offered?
-          <span class="toggle-icon">+</span>
+        <div class="faq-item">
+          <div class="faq-question">
+            2. Do you really guarantee a job within 90 days?
+          </div>
+          <div class="faq-answer">
+            Yes! We have partnerships with leading hotels and recruitment
+            agencies in London. Once you complete your training and
+            certification, we ensure you are placed in a suitable role within 90
+            days of your application.
+          </div>
         </div>
-        <div class="faq-answer">
-          We offer 2-week, 1-month, and 3-month hospitality training programs,
-          all with job guarantee options.
-        </div>
-      </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          How do I get my certificate after completing a training?
-          <span class="toggle-icon">+</span>
+        <div class="faq-item">
+          <div class="faq-question">3. What is Opera Cloud?</div>
+          <div class="faq-answer">
+            Opera Cloud (Property Management System) is a global hotel software
+            used by major hotels for reservations, check-ins, billing, and
+            customer management. Training on Opera PMS gives you an advantage
+            and makes you job-ready from day one.
+          </div>
         </div>
-        <div class="faq-answer">
-          Once you successfully complete a training program, your certificate
-          will be available in the Certificates page under your profile.
-        </div>
-      </div>
 
-      <div class="faq-item">
-        <div class="faq-question">
-          Can I request a password reset?
-          <span class="toggle-icon">+</span>
+        <div class="faq-item">
+          <div class="faq-question">4. Who can apply?</div>
+          <div class="faq-answer">
+            Our program is open to:<br /><br />
+            • UK residents seeking part-time or full-time hospitality jobs<br />
+            • International students and newcomers who want to start a career<br />
+            • Anyone looking to gain practical training and certifications to
+            improve their job prospects
+          </div>
         </div>
-        <div class="faq-answer">
-          Yes, click on "Forgot Password" on the login page to receive a
-          password reset link via your registered email.
+
+        <div class="faq-item">
+          <div class="faq-question">
+            5. Do I need prior experience in hospitality?
+          </div>
+          <div class="faq-answer">
+            No prior experience is required. We provide complete training and
+            support to help beginners as well as those looking to upgrade their
+            skills.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">6. What certifications will I receive?</div>
+          <div class="faq-answer">
+            You will receive industry-recognized certifications in hospitality
+            operations and systems (including Opera PMS), which are valued by
+            employers in the UK.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">7. How long does the training take?</div>
+          <div class="faq-answer">
+            Our training is short and intensive, designed to prepare you quickly
+            for the job market. The duration depends on your chosen program, but
+            most candidates complete it within a few weeks.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">8. Will you support me after training?</div>
+          <div class="faq-answer">
+            Yes! Our team provides continuous support until you secure
+            employment. We help with CV preparation, interview training, and
+            connecting you with the right employers.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            9. Are there any fees for training and job placement?
+          </div>
+          <div class="faq-answer">
+            We provide training, certification, and guaranteed job placement at
+            affordable program fees. (You can add details here about pricing and
+            our team will contact you.)
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">10. How do I get started?</div>
+          <div class="faq-answer">
+            It’s simple:<br /><br />
+            1. Apply online through our website.<br />
+            2. Join our training and certification program.<br />
+            3. Get placed in a guaranteed job within 90 days!
+          </div>
         </div>
       </div>
     </main>
 
+    <script src="script.js"></script>
     <script>
-      const faqItems = document.querySelectorAll(".faq-item");
-      faqItems.forEach((item) => {
-        item.addEventListener("click", () => {
+      // FAQ toggle functionality
+      document.querySelectorAll(".faq-question").forEach((q) => {
+        q.addEventListener("click", () => {
+          const item = q.parentElement;
           item.classList.toggle("active");
         });
       });
     </script>
-    <script src="script.js"></script>
   </body>
 </html>

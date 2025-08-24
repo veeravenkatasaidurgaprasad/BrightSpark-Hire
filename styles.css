@@ -48,7 +48,8 @@ header h1 {
   font-size: 18px;
 }
 #mainheadingtag {
-  font-size: 1.2rem;
+  font-size: 16px;
+  display: block;
 }
 
 .nav {

@@ -57,31 +57,54 @@
       content="https://brightsparkhire.com/images/BrightSpark-Hire-OG-Image.png"
     />
 
-    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "name": "BrightSpark Hire Consultancy Solutions",
+        "image": "https://brightsparkhire.com/images/BrightSpark-Hire-OG-Image.png",
         "url": "https://brightsparkhire.com",
         "logo": "https://brightsparkhire.com/images/BrightSpark-Hire-OG-Image.png",
-        "image": "https://brightsparkhire.com/images/BrightSpark-Hire-OG-Image.png",
-        "description": "BrightSpark Hire connects hospitality professionals with global career opportunities and expert training.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-XXXXXXXXXX",
-          "contactType": "customer service",
-          "areaServed": ["IN", "GB"],
-          "availableLanguage": ["English"]
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Your Office Address",
-          "addressLocality": "City",
-          "addressRegion": "State",
-          "postalCode": "PIN",
-          "addressCountry": "India"
-        },
+        "description": "BrightSpark Hire connects hospitality professionals with hotels, events, and global career opportunities through training and guaranteed job placements.",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "Baker Street",
+            "addressLocality": "London",
+            "postalCode": "NW1 6XE",
+            "addressCountry": "GB"
+          },
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "Balanagar, Kukatpally",
+            "addressLocality": "Hyderabad",
+            "postalCode": "500037",
+            "addressCountry": "IN"
+          }
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+44 7526555725",
+            "contactType": "customer support",
+            "areaServed": ["GB"],
+            "availableLanguage": ["English"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91 8464051009",
+            "contactType": "customer support",
+            "areaServed": ["IN"],
+            "availableLanguage": ["English", "Hindi"]
+          },
+          {
+            "@type": "ContactPoint",
+            "email": "support@brightspark.com",
+            "contactType": "support",
+            "areaServed": ["GB", "IN"],
+            "availableLanguage": ["English"]
+          }
+        ],
         "sameAs": [
           "https://www.facebook.com/brightsparkhire",
           "https://www.linkedin.com/company/brightsparkhire",
@@ -345,9 +368,9 @@
         <div class="grid">
           <div class="col-6 col-12 card">
             <h3>Contact</h3>
-            <p><strong>Email:</strong> support@hospitalityjobs.com</p>
-            <p><strong>Phone (India):</strong> +91 98765 43210</p>
-            <p><strong>Phone (UK):</strong> +44 20 7946 0011</p>
+            <p><strong>Email:</strong> support@brightspark.com</p>
+            <p><strong>Phone (India):</strong> +91 8464051009</p>
+            <p><strong>Phone (UK):</strong> +44 7526555725</p>
             <p><strong>Address:</strong> London, UK & Hyderabad, India</p>
             <div class="stack">
               <span class="chip">Mon to Sun</span>
@@ -359,12 +382,13 @@
             </div> -->
           </div>
           <div class="col-6 col-12 card" id="enroll">
-            <h3>Quick inquiry</h3>
+            <h3>Application Form</h3>
             <p class="muted">
               Share your interest and location and we will reach out
             </p>
             <form
-              onsubmit="event.preventDefault(); alert('Thanks  we will contact you soon');"
+              onsubmit="event.preventDefault(); alert('Thanks, we will contact you soon');"
+              enctype="multipart/form-data"
             >
               <div class="grid">
                 <div class="col-6 col-12">
@@ -376,6 +400,7 @@
                     required
                   />
                 </div>
+
                 <div class="col-6 col-12">
                   <label for="email">Email</label>
                   <input
@@ -388,32 +413,25 @@
                 </div>
 
                 <div class="col-6 col-12">
-                  <label for="Phone">Your Phone Number</label>
+                  <label for="phone">Your Phone Number</label>
                   <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="you Phone number"
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="Your Phone number"
                     required
                   />
                 </div>
+
                 <div class="col-6 col-12">
                   <label for="location">Location</label>
-                  <select id="location" name="location">
+                  <select id="location" name="location" required>
                     <option value="">Select Location</option>
                     <option>UK</option>
                     <option>India</option>
                   </select>
                 </div>
-                <!-- <div class="col-6 col-12">
-                  <label for="interest">Interest</label>
-                  <select id="interest" name="interest">
-                    <option>Jobs</option>
-                    <option>90 day training</option>
-                    <option>1 month training</option>
-                    <option>2 week training</option>
-                  </select>
-                </div> -->
+
                 <div class="col-12">
                   <label for="msg">Message</label>
                   <textarea
@@ -423,7 +441,27 @@
                     placeholder="Tell us about your goals"
                   ></textarea>
                 </div>
+
+                <!-- Optional Resume Upload -->
+                <div class="col-12">
+                  <label for="resume"
+                    >Upload Your Resume
+                    <small>(Optional, PDF or Word)</small></label
+                  >
+                  <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf,.doc,.docx"
+                  />
+                  <small
+                    >Uploading your resume helps us understand your skills and
+                    experience, increasing your chances of a perfect job
+                    match!</small
+                  >
+                </div>
               </div>
+
               <button
                 class="btn primary"
                 type="submit"
@@ -450,12 +488,21 @@
           </p>
         </div>
         <div>
-          <strong>UK office</strong>
-          <p class="muted">Baker Street London NW1 6XE</p>
+          <strong>UK Office</strong>
+          <p class="muted">London</p>
+          <p>Phone: +44 7526555725</p>
         </div>
         <div>
-          <strong>India office</strong>
-          <p class="muted">Balanagar, Kukatpally 500037</p>
+          <strong>India Office</strong>
+          <p class="muted">Balanagar, Hyderabad, 500037</p>
+          <p>Phone: +91 8464051009</p>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <p>
+            Email:
+            <a href="mailto:support@brightspark.com">support@brightspark.com</a>
+          </p>
         </div>
         <div>
           <strong>Links</strong>
@@ -482,3 +529,6 @@
     <script src="script.js"></script>
   </body>
 </html>
+
+<!-- Developer Credit -->
+<!-- Developed & Designed by Veera Venkata Sai Durga Prasad for BrightSpark Hire Consultancy Solutions -->

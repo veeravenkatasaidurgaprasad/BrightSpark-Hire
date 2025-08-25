@@ -56,14 +56,14 @@
         "@type": "LocalBusiness",
         "name": "BrightSpark Hire Consultancy Solutions",
         "image": "https://brightsparkhire.com/images/BrightSpark-Hire-OG-Image.png",
-        "telephone": "+91-XXXXXXXXXX",
+        "telephone": "+44 7526555725",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Your Office Address",
-          "addressLocality": "City",
-          "addressRegion": "State",
-          "postalCode": "PIN",
-          "addressCountry": "India"
+          "streetAddress": "Your Office Address UK",
+          "addressLocality": "London",
+          "addressRegion": "England",
+          "postalCode": "W1A 1AA",
+          "addressCountry": "United Kingdom"
         },
         "url": "https://brightsparkhire.com/contact",
         "logo": "https://brightsparkhire.com/images/BrightSpark-Hire-OG-Image.png",
@@ -73,13 +73,29 @@
           "https://twitter.com/brightsparkhire"
         ],
         "description": "Contact BrightSpark Hire for career support, employer partnerships, or training inquiries. Start your journey in hospitality with us today.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-XXXXXXXXXX",
-          "contactType": "customer service",
-          "areaServed": "IN",
-          "availableLanguage": ["English", "Hindi"]
-        }
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+44 7526555725",
+            "contactType": "customer service",
+            "areaServed": "GB",
+            "availableLanguage": ["English"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91 8464051009",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          {
+            "@type": "ContactPoint",
+            "email": "support@brightspark.com",
+            "contactType": "support",
+            "areaServed": ["GB", "IN"],
+            "availableLanguage": ["English"]
+          }
+        ]
       }
     </script>
 
@@ -235,38 +251,59 @@
           <!-- Contact Info -->
           <div class="contact-info">
             <h3>Get in Touch</h3>
-            <p><strong>Email:</strong> support@hospitalityjobs.com</p>
-            <p><strong>Phone (India):</strong> +91 98765 43210</p>
-            <p><strong>Phone (UK):</strong> +44 20 7946 0011</p>
+            <p><strong>Email:</strong> support@brightspark.com</p>
+            <p><strong>Phone (India):</strong> +91 8464051009</p>
+            <p><strong>Phone (UK):</strong> +44 7526555725</p>
             <p><strong>Address:</strong> London, UK & Hyderabad, India</p>
           </div>
 
           <!-- Contact Form -->
-          <form class="contact-form">
+          <form class="contact-form" enctype="multipart/form-data">
             <div class="form-group">
               <input type="text" id="name" placeholder=" " required />
               <label for="name">Full Name</label>
             </div>
+
             <div class="form-group">
               <input type="email" id="email" placeholder=" " required />
               <label for="email">Email Address</label>
             </div>
+
             <div class="form-group">
-              <input type="phone" id="Phone" placeholder=" " required />
+              <input type="phone" id="phone" placeholder=" " required />
               <label for="phone">Phone Number</label>
             </div>
 
             <div class="form-group">
-              <select id="location" name="location">
+              <select id="location" name="location" required>
                 <option value="">Select Location</option>
                 <option>UK</option>
                 <option>India</option>
               </select>
             </div>
+
             <div class="form-group">
               <textarea id="message" placeholder=" " required></textarea>
               <label for="message">Message</label>
             </div>
+
+            <!-- Resume Upload Field -->
+            <div class="form-group">
+              <input
+                type="file"
+                id="resume"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+              />
+              <label for="resume">Upload Your Resume</label>
+
+              <small
+                >Uploading your resume helps us understand your skills and
+                experience, increasing your chances of a perfect job
+                match!</small
+              >
+            </div>
+
             <div class="form-actions">
               <button type="submit" class="btn">Send Message</button>
             </div>
@@ -287,19 +324,28 @@
           </p>
         </div>
         <div>
-          <strong>UK office</strong>
-          <p class="muted">Baker Street London NW1 6XE</p>
+          <strong>UK Office</strong>
+          <p class="muted">London</p>
+          <p>Phone: +44 7526555725</p>
         </div>
         <div>
-          <strong>India office</strong>
-          <p class="muted">Balanagar, Kukatpally 500037</p>
+          <strong>India Office</strong>
+          <p class="muted">Balanagar, Hyderabad, 500037</p>
+          <p>Phone: +91 8464051009</p>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <p>
+            Email:
+            <a href="mailto:support@brightspark.com">support@brightspark.com</a>
+          </p>
         </div>
         <div>
           <strong>Links</strong>
           <p>
-            <a href="./jobslisting.html">Jobs</a> ·
-            <a href="./trainingprogram.html">Training</a> ·
-            <a href="./contact.html">Contact</a>
+            <a href="/jobslisting.html">Jobs</a> ·
+            <a href="/trainingprogram.html">Training</a> ·
+            <a href="/contact.html">Contact</a>
           </p>
         </div>
       </div>
@@ -307,8 +353,8 @@
       <div class="container foot-bottom">
         <span class="muted">© 2025 BrightSpark Hire Consultancy Solutions</span>
         <div class="foot-links">
-          <a href="./termsandconditions.html">Terms & Conditions</a>
-          <a href="./privacypolicy.html">Privacy Policy</a>
+          <a href="/termsandconditions.html">Terms & Conditions</a>
+          <a href="/privacypolicy.html">Privacy Policy</a>
           <span id="footerBadge" class="badge" title="Guarantee"
             >Job Guarantee</span
           >

@@ -554,3 +554,8 @@ a {
   cursor: pointer;
   color: #1f2937;
 }
+
+#homeContact h3,
+#homeContact p {
+  margin-bottom: 1rem;
+}

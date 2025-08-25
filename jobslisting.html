@@ -306,6 +306,10 @@
         color: #2a7a3b;
       }
 
+      .job-type.fulltimeorparttime {
+        background: #d1f7d6;
+        color: #2a7a3b;
+      }
       .job-type.parttime {
         background: #ffe7cc;
         color: #a65b00;
@@ -348,16 +352,18 @@
       <div class="nav">
         <div class="brand">
           <div class="logo">BS</div>
-          <h1>BrightSpark Hire Consultancy Solutions</h1>
+          <a href="/index.html" id="brandHeading">
+            <h1>BrightSpark Hire Consultancy Solutions</h1></a
+          >
         </div>
         <button class="hamburger menutoggle" aria-label="Menu">☰</button>
         <nav class="menu">
-          <a href="./index.html">Home</a>
-          <a href="./jobslisting.html">Jobs</a>
-          <a href="./trainingprogram.html">Training</a>
-          <a href="./aboutus.html">About Us</a>
-          <a href="./whychooseus.html">Why Us</a>
-          <a href="./contact.html">Contact Us</a>
+          <a href="/index.html">Home</a>
+          <a href="/jobslisting.html">Jobs</a>
+          <a href="/trainingprogram.html">Training</a>
+          <a href="/aboutus.html">About Us</a>
+          <a href="/whychooseus.html">Why Us</a>
+          <a href="/contact.html">Contact Us</a>
         </nav>
       </div>
     </header>
@@ -371,23 +377,31 @@
         <div class="filters">
           <select id="locationFilter">
             <option value="">Filter by Location</option>
-            <option value="india">India</option>
-            <option value="uk">UK</option>
+            <option value="ukorindia">UK / India</option>
+            <option value="india" disabled>India</option>
+            <option value="uk" disabled>UK</option>
           </select>
           <select id="typeFilter">
             <option value="">Filter by Job Type</option>
-            <option value="fulltime">Full-Time</option>
-            <option value="parttime">Part-Time</option>
+            <option value="fulltimeorparttime">Full-Time / Part-Time</option>
+            <option value="fulltime" disabled>Full-Time</option>
+            <option value="parttime" disabled>Part-Time</option>
           </select>
         </div>
 
         <!-- Job Cards -->
-        <div class="job-card" data-location="india" data-type="fulltime">
+        <div
+          class="job-card"
+          data-location="ukorindia"
+          data-type="fulltimeorparttime"
+        >
           <div class="job-header">
             <h3>Groups and Events Executive</h3>
-            <span class="job-type fulltime">Full-Time</span>
+            <span class="job-type fulltimeorparttime"
+              >Full-Time / Part-Time</span
+            >
           </div>
-          <div class="job-meta">Location: Hyderabad, India</div>
+          <div class="job-meta">Location: UK / India</div>
           <p class="job-desc">
             Manage group bookings, events coordination, and customer liaison.
           </p>
@@ -396,12 +410,18 @@
           </div>
         </div>
 
-        <div class="job-card" data-location="india" data-type="parttime">
+        <div
+          class="job-card"
+          data-location="ukorindia"
+          data-type="fulltimeorparttime"
+        >
           <div class="job-header">
             <h3>Reservations Agent</h3>
-            <span class="job-type parttime">Part-Time</span>
+            <span class="job-type fulltimeorparttime"
+              >Full-Time / Part-Time</span
+            >
           </div>
-          <div class="job-meta">Location: Mumbai, India</div>
+          <div class="job-meta">Location: UK / India</div>
           <p class="job-desc">
             Handle booking inquiries, confirmations, and guest communications.
           </p>
@@ -410,12 +430,18 @@
           </div>
         </div>
 
-        <div class="job-card" data-location="uk" data-type="fulltime">
+        <div
+          class="job-card"
+          data-location="ukorindia"
+          data-type="fulltimeorparttime"
+        >
           <div class="job-header">
             <h3>Receptionist</h3>
-            <span class="job-type fulltime">Full-Time</span>
+            <span class="job-type fulltimeorparttime"
+              >Full-Time / Part-Time</span
+            >
           </div>
-          <div class="job-meta">Location: London, UK</div>
+          <div class="job-meta">Location: UK / India</div>
           <p class="job-desc">
             Manage front desk operations and provide excellent customer service.
           </p>
@@ -424,12 +450,18 @@
           </div>
         </div>
 
-        <div class="job-card" data-location="uk" data-type="parttime">
+        <div
+          class="job-card"
+          data-location="ukorindia"
+          data-type="fulltimeorparttime"
+        >
           <div class="job-header">
             <h3>Reception Supervisor</h3>
-            <span class="job-type parttime">Part-Time</span>
+            <span class="job-type fulltimeorparttime"
+              >Full-Time / Part-Time</span
+            >
           </div>
-          <div class="job-meta">Location: Manchester, UK</div>
+          <div class="job-meta">Location: UK / India</div>
           <p class="job-desc">
             Supervise front desk staff, ensure smooth operations and guest
             satisfaction.
@@ -439,12 +471,18 @@
           </div>
         </div>
 
-        <div class="job-card" data-location="india" data-type="fulltime">
+        <div
+          class="job-card"
+          data-location="ukorindia"
+          data-type="fulltimeorparttime"
+        >
           <div class="job-header">
             <h3>Duty Manager</h3>
-            <span class="job-type fulltime">Full-Time</span>
+            <span class="job-type fulltimeorparttime"
+              >Full-Time / Part-Time</span
+            >
           </div>
-          <div class="job-meta">Location: Bangalore, India</div>
+          <div class="job-meta">Location: UK / India</div>
           <p class="job-desc">
             Oversee hotel operations during shifts, ensuring high-quality
             service.
@@ -454,12 +492,18 @@
           </div>
         </div>
 
-        <div class="job-card" data-location="uk" data-type="fulltime">
+        <div
+          class="job-card"
+          data-location="ukorindia"
+          data-type="fulltimeorparttime"
+        >
           <div class="job-header">
             <h3>Sales Executive</h3>
-            <span class="job-type fulltime">Full-Time</span>
+            <span class="job-type fulltimeorparttime"
+              >Full-Time / Part-Time</span
+            >
           </div>
-          <div class="job-meta">Location: London, UK</div>
+          <div class="job-meta">Location: UK / India</div>
           <p class="job-desc">
             Drive sales, manage client relationships, and generate revenue
             opportunities.
@@ -469,12 +513,18 @@
           </div>
         </div>
 
-        <div class="job-card" data-location="india" data-type="parttime">
+        <div
+          class="job-card"
+          data-location="ukorindia"
+          data-type="fulltimeorparttime"
+        >
           <div class="job-header">
             <h3>Admin</h3>
-            <span class="job-type parttime">Part-Time</span>
+            <span class="job-type fulltimeorparttime"
+              >Full-Time / Part-Time</span
+            >
           </div>
-          <div class="job-meta">Location: Hyderabad, India</div>
+          <div class="job-meta">Location: UK / India</div>
           <p class="job-desc">
             Handle administrative tasks, documentation, and internal
             coordination.
@@ -484,12 +534,18 @@
           </div>
         </div>
 
-        <div class="job-card" data-location="uk" data-type="parttime">
+        <div
+          class="job-card"
+          data-location="ukorindia"
+          data-type="fulltimeorparttime"
+        >
           <div class="job-header">
             <h3>F&B Assistant</h3>
-            <span class="job-type parttime">Part-Time</span>
+            <span class="job-type fulltimeorparttime"
+              >Full-Time / Part-Time</span
+            >
           </div>
-          <div class="job-meta">Location: Edinburgh, UK</div>
+          <div class="job-meta">Location: UK / India</div>
           <p class="job-desc">
             Assist in food & beverage service, maintain cleanliness, and ensure
             guest satisfaction.
@@ -524,9 +580,9 @@
         <div>
           <strong>Links</strong>
           <p>
-            <a href="./jobslisting.html">Jobs</a> ·
-            <a href="./trainingprogram.html">Training</a> ·
-            <a href="./contact.html">Contact</a>
+            <a href="/jobslisting.html">Jobs</a> ·
+            <a href="/trainingprogram.html">Training</a> ·
+            <a href="/contact.html">Contact</a>
           </p>
         </div>
       </div>
@@ -534,8 +590,8 @@
       <div class="container foot-bottom">
         <span class="muted">© 2025 BrightSpark Hire Consultancy Solutions</span>
         <div class="foot-links">
-          <a href="./termsandconditions.html">Terms & Conditions</a>
-          <a href="./privacypolicy.html">Privacy Policy</a>
+          <a href="/termsandconditions.html">Terms & Conditions</a>
+          <a href="/privacypolicy.html">Privacy Policy</a>
           <span id="footerBadge" class="badge" title="Guarantee"
             >Job Guarantee</span
           >
